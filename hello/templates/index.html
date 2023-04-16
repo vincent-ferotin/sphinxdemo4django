@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Messages</h2>
+
+    {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li><q>{{ message.value }}</q></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun message pour le moment.</p>
+    {% endif %}
+{% endblock %}
