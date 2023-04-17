@@ -1,3 +1,5 @@
+.. include:: _links.rst
+
 Documentation de `SphinxDemo`
 =============================
 
@@ -6,6 +8,7 @@ Documentation de `SphinxDemo`
     :caption: Contenu:
 
     introduction
+    api/index
 
 
 Autres sections

@@ -2,6 +2,22 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+from pathlib import Path
+import os
+import sys
+
+import django
+
+
+# Let Django apps accessible through sys.path
+_this_filepath = Path(os.path.realpath(__file__))
+_apps_dirpath = _this_filepath.parent.parent.parent
+sys.path.insert(0, str(_apps_dirpath))
+
+# Setup Django
+os.environ['DJANGO_SETTINGS_MODULE'] = 'sphinxdemo.settings'
+django.setup()
+
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -14,7 +30,9 @@ release = '0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',
+]
 
 templates_path = ['_templates']
 exclude_patterns = []

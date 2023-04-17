@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>App hello &#8212; Documentation SphinxDemo 0</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/library/library.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="prev" title="Applications Django (apps)" href="index.html" />
+ 
+
+<link rel="stylesheet" id="sphinx-library-type" href="../../_static/library/type-book.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.9" />
+<script>
+  mobile_menu_content = "";
+  function toggleMenu() {
+    var div = document.getElementsByClassName("document").item(0);
+    var btn = document.getElementById("menu-toggler");
+    if(div.classList.contains("mobile-show")) {
+      div.classList.remove("mobile-show");
+      btn.innerHTML = mobile_menu_content;
+    }
+    else {
+      div.classList.add("mobile-show");
+      mobile_menu_content = btn.innerHTML;
+      btn.innerHTML = btn.getAttribute("data-open");
+    }
+  }
+</script>
+  </head>
+<body class="light">
+<div class="document">
+
+  
+  <nav class="mobile-menu" role="navigation">
+    
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="../../index.html">SphinxDemo</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
+  
+
+  
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+<h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#"><cite>App</cite> <code class="docutils literal notranslate"><span class="pre">hello</span></code></a><ul>
+<li><a class="reference internal" href="#module-hello.apps">Module <code class="docutils literal notranslate"><span class="pre">apps</span></code></a><ul>
+<li><a class="reference internal" href="#hello.apps.HelloConfig"><code class="docutils literal notranslate"><span class="pre">HelloConfig</span></code></a><ul>
+<li><a class="reference internal" href="#hello.apps.HelloConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">HelloConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#hello.apps.HelloConfig.name"><code class="docutils literal notranslate"><span class="pre">HelloConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#hello.apps.HelloConfig.ready"><code class="docutils literal notranslate"><span class="pre">HelloConfig.ready()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-hello.models">Module <code class="docutils literal notranslate"><span class="pre">models</span></code></a><ul>
+<li><a class="reference internal" href="#hello.models.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a><ul>
+<li><a class="reference internal" href="#hello.models.Message.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Message.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#hello.models.Message.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Message.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#hello.models.Message.id"><code class="docutils literal notranslate"><span class="pre">Message.id</span></code></a></li>
+<li><a class="reference internal" href="#hello.models.Message.objects"><code class="docutils literal notranslate"><span class="pre">Message.objects</span></code></a></li>
+<li><a class="reference internal" href="#hello.models.Message.prepopulate"><code class="docutils literal notranslate"><span class="pre">Message.prepopulate()</span></code></a></li>
+<li><a class="reference internal" href="#hello.models.Message.value"><code class="docutils literal notranslate"><span class="pre">Message.value</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hello.models.PREPOPULATED_DATA"><code class="docutils literal notranslate"><span class="pre">PREPOPULATED_DATA</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-hello.urls">Module <code class="docutils literal notranslate"><span class="pre">urls</span></code></a><ul>
+<li><a class="reference internal" href="#hello.urls.urlpatterns"><code class="docutils literal notranslate"><span class="pre">urlpatterns</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-hello.views">Module <code class="docutils literal notranslate"><span class="pre">views</span></code></a><ul>
+<li><a class="reference internal" href="#hello.views.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Sujet précédent</h4>
+    <p class="topless"><a href="index.html"
+                          title="Chapitre précédent">Applications <cite>Django</cite> (<cite>apps</cite>)</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+  </nav>
+  <div class="documentwrapper">
+    
+
+    <main class="body" role="main" id="main">
+      
+  <section id="module-hello">
+<span id="app-hello"></span><h1><cite>App</cite> <code class="docutils literal notranslate"><span class="pre">hello</span></code><a class="headerlink" href="#module-hello" title="Lien permanent vers cette rubrique">¶</a></h1>
+<p><cite>App</cite> <cite>Django</cite> servant de démonstration pour l’utilisation de <cite>Sphinx</cite>.</p>
+<section id="module-hello.apps">
+<span id="module-apps"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">apps</span></code><a class="headerlink" href="#module-hello.apps" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Configuration de l”<cite>app</cite> pour <cite>Django</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.apps.HelloConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.apps.</span></span><span class="sig-name descname"><span class="pre">HelloConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.apps.HelloConfig" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Config. de l”<cite>app</cite>.</p>
+<p>Le chemin de cette classe est à ajouter à <cite>INSTALLED_APPS</cite> pour inclure
+cette <cite>app</cite> à votre projet:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">settings.py</span><a class="headerlink" href="#id1" title="Lien permanent vers ce code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># ...</span>
+    <span class="s1">&#39;hello.apps.HelloConfig&#39;</span><span class="p">,</span>
+    <span class="c1"># ...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hello.apps.HelloConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#hello.apps.HelloConfig.default_auto_field" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Champ additionnel automatiquement inclus dans les <cite>modèles</cite> de l”<cite>app</cite>
+comme <cite>id</cite> (<cite>django.db.models.Field</cite>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hello.apps.HelloConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hello'</span></em><a class="headerlink" href="#hello.apps.HelloConfig.name" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Nom de l”<cite>app</cite> (<cite>str</cite>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.apps.HelloConfig.ready">
+<span class="sig-name descname"><span class="pre">ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.apps.HelloConfig.ready" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Méthode appelée par un <cite>hook</cite> <cite>Django</cite> à la fin d’initialisation du projet,
+permettant l’exécution de code idoine une seule fois.</p>
+<p>Ici, on peuple la base de données avec des premières instances de <cite>modèles</cite>,
+via <a class="reference internal" href="#hello.models.Message.prepopulate" title="hello.models.Message.prepopulate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">hello.models.Message.prepopulate()</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-hello.models">
+<span id="module-models"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">models</span></code><a class="headerlink" href="#module-hello.models" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Modèles <cite>Django</cite> de l”<cite>app</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hello.models.Message">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.models.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.models.Message" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Message texte tout simple.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="hello.models.Message.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#hello.models.Message.DoesNotExist" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="hello.models.Message.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#hello.models.Message.MultipleObjectsReturned" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hello.models.Message.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#hello.models.Message.id" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hello.models.Message.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#hello.models.Message.objects" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hello.models.Message.prepopulate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prepopulate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hello.models.Message.prepopulate" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Peuplement de la base de données avec les premiers <a class="reference internal" href="#hello.models.Message" title="hello.models.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>
+construits d’après les valeurs de <a class="reference internal" href="#hello.models.PREPOPULATED_DATA" title="hello.models.PREPOPULATED_DATA"><code class="xref py py-data docutils literal notranslate"><span class="pre">PREPOPULATED_DATA</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hello.models.Message.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#hello.models.Message.value" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Valeur textuelle du message (<cite>django.models.CharField</cite>).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="hello.models.PREPOPULATED_DATA">
+<span class="sig-prename descclassname"><span class="pre">hello.models.</span></span><span class="sig-name descname"><span class="pre">PREPOPULATED_DATA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'value':</span> <span class="pre">'Hello,</span> <span class="pre">World!'},</span> <span class="pre">{'value':</span> <span class="pre">'Bye</span> <span class="pre">bye...'}]</span></em><a class="headerlink" href="#hello.models.PREPOPULATED_DATA" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Valeurs hardcodées de <a class="reference internal" href="#hello.models.Message" title="hello.models.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>, servant au peuplement
+initiale de la base de données (<cite>dict</cite> of <cite>str</cite>: <cite>str</cite>).</p>
+</dd></dl>
+
+</section>
+<section id="module-hello.urls">
+<span id="module-urls"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">urls</span></code><a class="headerlink" href="#module-hello.urls" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Patrons d’URLs de l”<cite>app</cite>.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="hello.urls.urlpatterns">
+<span class="sig-prename descclassname"><span class="pre">hello.urls.</span></span><span class="sig-name descname"><span class="pre">urlpatterns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;URLPattern</span> <span class="pre">''</span> <span class="pre">[name='hello_index']&gt;]</span></em><a class="headerlink" href="#hello.urls.urlpatterns" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Liste des patrons d’URLs gérés par l”<cite>appp</cite>.</p>
+</dd></dl>
+
+</section>
+<section id="module-hello.views">
+<span id="module-views"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">views</span></code><a class="headerlink" href="#module-hello.views" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Vues de l’app.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hello.views.index">
+<span class="sig-prename descclassname"><span class="pre">hello.views.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.views.index" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Liste tous les <a class="reference internal" href="#hello.models.Message" title="hello.models.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">hello.models.Message</span></code></a> disponibles en base de données.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </main>
+    <nav class="related bottom" role="navigation">
+  <a class="prev" href="index.html" title="Previous">
+    &larr; Applications <cite>Django</cite> (<cite>apps</cite>)
+  </a>
+  <div class="clear"></div>
+    </nav>
+    
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<footer class="footer" role="contentinfo">
+    &copy; Copyright 2023, Vincent Férotin.
+  
+  Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
+  <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.
+  
+</footer>
+  </body>
+</html>
