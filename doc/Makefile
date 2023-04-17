@@ -7,14 +7,26 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR      = src
 BUILDDIR       = .
+OUTPUTS        = doctrees \
+  html
+OUTPUT_DIRS    = $(foreach output,$(OUTPUTS),$(BUILDDIR)/$(output))
 
 # Put it first so that "make" without argument is like "make help".
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@echo "Please use `make target' where target is one of:"
+	@echo "  html        to make standalone HTML files"
+	@echo "  clean       to remove everything in the build directory"
 
-.PHONY: help Makefile
+.PHONY: \
+  help \
+  clean \
+  html \
+  Makefile
 
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+clean: Makefile
+	@for dirname in $(OUTPUT_DIRS); do \
+	    rm -Rf "$$dirname"; \
+	done; unset dirname
+
+html: Makefile
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
