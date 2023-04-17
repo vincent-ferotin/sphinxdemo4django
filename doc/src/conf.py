@@ -26,3 +26,5 @@ language = 'fr'
 
 html_theme = 'library'
 html_static_path = ['_static']
+html_copy_source = False
+
