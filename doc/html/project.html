@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Projet Django (sphinxdemo) &#8212; Documentation SphinxDemo 0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/library/library.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Application Programming Interface (A.P.I.)" href="api/index.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
+ 
+
+<link rel="stylesheet" id="sphinx-library-type" href="_static/library/type-book.css" type="text/css" />
+<link rel="stylesheet" href="_static/custom.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.9" />
+<script>
+  mobile_menu_content = "";
+  function toggleMenu() {
+    var div = document.getElementsByClassName("document").item(0);
+    var btn = document.getElementById("menu-toggler");
+    if(div.classList.contains("mobile-show")) {
+      div.classList.remove("mobile-show");
+      btn.innerHTML = mobile_menu_content;
+    }
+    else {
+      div.classList.add("mobile-show");
+      mobile_menu_content = btn.innerHTML;
+      btn.innerHTML = btn.getAttribute("data-open");
+    }
+  }
+</script>
+  </head>
+<body class="light">
+<div class="document">
+
+  
+  <nav class="mobile-menu" role="navigation">
+    
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="index.html">SphinxDemo</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
+  
+
+  
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+<h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#"><cite>Projet</cite> <cite>Django</cite> (<code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-sphinxdemo.settings"><code class="docutils literal notranslate"><span class="pre">settings.py</span></code></a><ul>
+<li><a class="reference internal" href="#sphinxdemo.settings.ALLOWED_HOSTS"><code class="docutils literal notranslate"><span class="pre">ALLOWED_HOSTS</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.BASE_DIR"><code class="docutils literal notranslate"><span class="pre">BASE_DIR</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.DATABASES"><code class="docutils literal notranslate"><span class="pre">DATABASES</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.DATA_DIR"><code class="docutils literal notranslate"><span class="pre">DATA_DIR</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.DEBUG"><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.INSTALLED_APPS"><code class="docutils literal notranslate"><span class="pre">INSTALLED_APPS</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.MIDDLEWARE"><code class="docutils literal notranslate"><span class="pre">MIDDLEWARE</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.ROOT_URLCONF"><code class="docutils literal notranslate"><span class="pre">ROOT_URLCONF</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.SECRET_KEY"><code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.STATIC_URL"><code class="docutils literal notranslate"><span class="pre">STATIC_URL</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.TIME_ZONE"><code class="docutils literal notranslate"><span class="pre">TIME_ZONE</span></code></a></li>
+<li><a class="reference internal" href="#sphinxdemo.settings.WSGI_APPLICATION"><code class="docutils literal notranslate"><span class="pre">WSGI_APPLICATION</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-sphinxdemo.urls"><code class="docutils literal notranslate"><span class="pre">urls.py</span></code></a><ul>
+<li><a class="reference internal" href="#sphinxdemo.urls.urlpatterns"><code class="docutils literal notranslate"><span class="pre">urlpatterns</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Sujet précédent</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="Chapitre précédent">Introduction</a></p>
+  </div>
+  <div>
+    <h4>Sujet suivant</h4>
+    <p class="topless"><a href="api/index.html"
+                          title="Chapitre suivant">Application Programming Interface (A.P.I.)</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+  </nav>
+  <div class="documentwrapper">
+    
+
+    <main class="body" role="main" id="main">
+      
+  <section id="projet-django-sphinxdemo">
+<h1><cite>Projet</cite> <cite>Django</cite> (<code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>)<a class="headerlink" href="#projet-django-sphinxdemo" title="Lien permanent vers cette rubrique">¶</a></h1>
+<p>Un <cite>projet</cite> <a class="reference external" href="https://www.djangoproject.com/">Django</a> consiste ici en une <cite>instance</cite> de <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>,
+consituée de sa configuration dans le fichier <a class="reference internal" href="#settings"><span class="std std-ref">settings.py</span></a>,
+sa base de données associée, etc.</p>
+<section id="module-sphinxdemo.settings">
+<span id="settings-py"></span><span id="settings"></span><h2><code class="docutils literal notranslate"><span class="pre">settings.py</span></code><a class="headerlink" href="#module-sphinxdemo.settings" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Configuration d’une instance de projet Django pour l”<cite>app</cite> <cite>hello</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/topics/settings/#django-settings-module" title="(disponible dans Django v4.2)"><span>Designating the settings</span></a></p>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.ALLOWED_HOSTS">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">ALLOWED_HOSTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#sphinxdemo.settings.ALLOWED_HOSTS" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Liste blanche d’hôtes autorisés à se connecter au projet.</p>
+<p>Laisser vide pour un site publique,
+sinon expliciter les clients autorisés.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-ALLOWED_HOSTS" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">ALLOWED_HOSTS</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.BASE_DIR">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">BASE_DIR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">PosixPath('/home/work/projects/sphinx/sphinxdemo4django/work')</span></em><a class="headerlink" href="#sphinxdemo.settings.BASE_DIR" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Chemin du répertoire racine du dépôt <cite>git</cite> du présent projet
+(<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(disponible dans Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.DATABASES">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">DATABASES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'default':</span> <span class="pre">{'ATOMIC_REQUESTS':</span> <span class="pre">False,</span> <span class="pre">'AUTOCOMMIT':</span> <span class="pre">True,</span> <span class="pre">'CONN_HEALTH_CHECKS':</span> <span class="pre">False,</span> <span class="pre">'CONN_MAX_AGE':</span> <span class="pre">0,</span> <span class="pre">'ENGINE':</span> <span class="pre">'django.db.backends.sqlite3',</span> <span class="pre">'HOST':</span> <span class="pre">'',</span> <span class="pre">'NAME':</span> <span class="pre">PosixPath('/home/work/projects/sphinx/sphinxdemo4django/work/data/database.sqlite3'),</span> <span class="pre">'OPTIONS':</span> <span class="pre">{},</span> <span class="pre">'PASSWORD':</span> <span class="pre">'',</span> <span class="pre">'PORT':</span> <span class="pre">'',</span> <span class="pre">'TEST':</span> <span class="pre">{'CHARSET':</span> <span class="pre">None,</span> <span class="pre">'COLLATION':</span> <span class="pre">None,</span> <span class="pre">'MIGRATE':</span> <span class="pre">True,</span> <span class="pre">'MIRROR':</span> <span class="pre">None,</span> <span class="pre">'NAME':</span> <span class="pre">None},</span> <span class="pre">'TIME_ZONE':</span> <span class="pre">None,</span> <span class="pre">'USER':</span> <span class="pre">''}}</span></em><a class="headerlink" href="#sphinxdemo.settings.DATABASES" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Configuration de la (ou les) base(s) de données du projet.</p>
+<p>Pour cette <cite>app</cite> <cite>Django</cite> très simple, il n’y a qu’une seule base de données
+à configurer, nommée <code class="docutils literal notranslate"><span class="pre">'default'</span></code>.</p>
+<p>Pour le développement de l”<cite>app</cite> comme pour un déploiement à petite échelle,
+une base <cite>SQLite</cite> suffit amplement, et permet de se dispenser de monter et configurer
+un serveur de bases de données dédié, comme <cite>MariaDB</cite> ou <cite>PostgreSQL</cite>.
+Le chemin de la base est ici configuré par défaut pour avoir comme répertoire parent
+<a class="reference internal" href="#sphinxdemo.settings.DATA_DIR" title="sphinxdemo.settings.DATA_DIR"><code class="xref py py-data docutils literal notranslate"><span class="pre">DATA_DIR</span></code></a>, défini dans ce même fichier <code class="docutils literal notranslate"><span class="pre">settings.py</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-DATABASES" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">DATABASES</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.DATA_DIR">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">DATA_DIR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">PosixPath('/home/work/projects/sphinx/sphinxdemo4django/work/data')</span></em><a class="headerlink" href="#sphinxdemo.settings.DATA_DIR" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Chemin du répertoire de données du <cite>projet</cite> <cite>Django</cite> (ou <cite>instance</cite>)
+(<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(disponible dans Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>).</p>
+<p>C’est dans ce répertoire que pourrait être stockée par exemple
+<a class="reference internal" href="#sphinxdemo.settings.DATABASES" title="sphinxdemo.settings.DATABASES"><code class="xref py py-data docutils literal notranslate"><span class="pre">la</span> <span class="pre">base</span> <span class="pre">SQLite</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.DEBUG">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">DEBUG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#sphinxdemo.settings.DEBUG" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Activation du mode <cite>debug</cite> de <cite>Django</cite> (<cite>bool</cite>).</p>
+<p>Positionner à <code class="docutils literal notranslate"><span class="pre">True</span></code> est utile en phase de développement.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Securité</strong>: En production, doit être positionnée à <code class="docutils literal notranslate"><span class="pre">False</span></code>!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-DEBUG" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">DEBUG</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.INSTALLED_APPS">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">INSTALLED_APPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['hello.apps.HelloConfig',</span> <span class="pre">'django.contrib.auth',</span> <span class="pre">'django.contrib.contenttypes',</span> <span class="pre">'django.contrib.sessions',</span> <span class="pre">'django.contrib.messages',</span> <span class="pre">'django.contrib.staticfiles']</span></em><a class="headerlink" href="#sphinxdemo.settings.INSTALLED_APPS" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Liste des <cite>apps</cite> <cite>Django</cite> activées pour ce <cite>projet</cite> / cette <cite>instance</cite>
+(<cite>list</cite> of <cite>apps</cite> paths or <cite>config</cite>).</p>
+<p>L”<cite>app</cite> principale « maison » est <code class="docutils literal notranslate"><span class="pre">hello</span></code>, définie par sa configuration
+<a class="reference internal" href="api/app/hello.html#hello.apps.HelloConfig" title="hello.apps.HelloConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">hello.apps.HelloConfig</span></code></a>.</p>
+<p>Liste à adapter au déploiement de l’instance; dans le doute laisser telle quelle.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-INSTALLED_APPS" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">INSTALLED_APPS</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.MIDDLEWARE">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">MIDDLEWARE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['django.middleware.security.SecurityMiddleware',</span> <span class="pre">'django.contrib.sessions.middleware.SessionMiddleware',</span> <span class="pre">'django.middleware.common.CommonMiddleware',</span> <span class="pre">'django.middleware.csrf.CsrfViewMiddleware',</span> <span class="pre">'django.contrib.auth.middleware.AuthenticationMiddleware',</span> <span class="pre">'django.contrib.messages.middleware.MessageMiddleware',</span> <span class="pre">'django.middleware.clickjacking.XFrameOptionsMiddleware']</span></em><a class="headerlink" href="#sphinxdemo.settings.MIDDLEWARE" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Liste des <cite>middlewares</cite> <cite>Django</cite> activés pour ce <cite>projet</cite> / cette <cite>instance</cite>
+(<cite>list</cite> of <cite>middlewares</cite> class paths).</p>
+<p>Liste à adapter au déploiement de l’instance; dans le doute laisser telle quelle.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-MIDDLEWARE" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">MIDDLEWARE</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.ROOT_URLCONF">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">ROOT_URLCONF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sphinxdemo.urls'</span></em><a class="headerlink" href="#sphinxdemo.settings.ROOT_URLCONF" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Chemin du module définissant les patrons d’URLs gérés par ce <cite>projet</cite> / cette <cite>instance</cite>
+(<cite>str</cite> of <cite>module</cite> path).</p>
+<p>La première partie (ici <code class="docutils literal notranslate"><span class="pre">'sphinxdemo'</span></code>) correspond
+au <a class="reference external" href="https://docs.python.org/3/glossary.html#term-package" title="(disponible dans Python v3.11)"><span class="xref std std-term">package</span></a> du projet, et à adapter si besoin
+à la configuration de votre déploiement.
+La seconde partie (ici <code class="docutils literal notranslate"><span class="pre">'urls'</span></code>) correspond au <a class="reference external" href="https://docs.python.org/3/glossary.html#term-module" title="(disponible dans Python v3.11)"><span class="xref std std-term">module</span></a>
+<code class="docutils literal notranslate"><span class="pre">sphinxdemo/urls.py</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference internal" href="#urls"><span class="std std-ref">urls.py</span></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.SECRET_KEY">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">SECRET_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django-insecure-dw3&amp;1aos--n#1&amp;^1v-z=ou8(i5is_sit&#64;$=p_l0+5nh1kbtrqz'</span></em><a class="headerlink" href="#sphinxdemo.settings.SECRET_KEY" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Clef de chiffrement pour les données du <cite>projet</cite>, par ex. les <cite>cookies web</cite>
+(<cite>str</cite>).</p>
+<p>La valeur de cette variable est à changer à chaque <cite>instanciation</cite> du <cite>projet</cite>!</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Securité</strong>: La clef utilisée en production doit évidemment rester secrète!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SECRET_KEY" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">SECRET_KEY</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.STATIC_URL">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">STATIC_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'static/'</span></em><a class="headerlink" href="#sphinxdemo.settings.STATIC_URL" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-STATIC_URL" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">STATIC_URL</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.TIME_ZONE">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">TIME_ZONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Europe/Paris'</span></em><a class="headerlink" href="#sphinxdemo.settings.TIME_ZONE" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fuseau horaire du projet
+(<cite>str</cite> as <a class="reference external" href="https://docs.python.org/3/library/zoneinfo.html#zoneinfo.ZoneInfo" title="(disponible dans Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">valid</span> <span class="pre">IANA</span> <span class="pre">time</span> <span class="pre">zone</span> <span class="pre">key</span></code></a>).</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-TIME_ZONE" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">TIME_ZONE</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.settings.WSGI_APPLICATION">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.settings.</span></span><span class="sig-name descname"><span class="pre">WSGI_APPLICATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sphinxdemo.wsgi.application'</span></em><a class="headerlink" href="#sphinxdemo.settings.WSGI_APPLICATION" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Application <a class="reference external" href="https://docs.python.org/3/library/wsgiref.html#module-wsgiref" title="(disponible dans Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">WSGI</span></code></a> pour servir en <cite>HTTP</cite> le projet.</p>
+<p>La première partie (ici <code class="docutils literal notranslate"><span class="pre">'sphinxdemo'</span></code>) correspond
+au <a class="reference external" href="https://docs.python.org/3/glossary.html#term-package" title="(disponible dans Python v3.11)"><span class="xref std std-term">package</span></a> du projet, et à adapter si besoin
+à la configuration de votre déploiement.
+La seconde partie (ici <code class="docutils literal notranslate"><span class="pre">'wsgi'</span></code>) correspond au <a class="reference external" href="https://docs.python.org/3/glossary.html#term-module" title="(disponible dans Python v3.11)"><span class="xref std std-term">module</span></a>
+<code class="docutils literal notranslate"><span class="pre">sphinxdemo/wsgi.py</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-WSGI_APPLICATION" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">WSGI_APPLICATION</span></code></a></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-sphinxdemo.urls">
+<span id="urls-py"></span><span id="urls"></span><h2><code class="docutils literal notranslate"><span class="pre">urls.py</span></code><a class="headerlink" href="#module-sphinxdemo.urls" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Configuration de patrons d’URLs pour le <cite>projet</cite>.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinxdemo.urls.urlpatterns">
+<span class="sig-prename descclassname"><span class="pre">sphinxdemo.urls.</span></span><span class="sig-name descname"><span class="pre">urlpatterns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;URLResolver</span> <span class="pre">&lt;module</span> <span class="pre">'hello.urls'</span> <span class="pre">from</span> <span class="pre">'/home/work/projects/sphinx/sphinxdemo4django/work/hello/urls.py'&gt;</span> <span class="pre">(None:None)</span> <span class="pre">''&gt;]</span></em><a class="headerlink" href="#sphinxdemo.urls.urlpatterns" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Liste des patrons d’URLs gérés par le <cite>projet</cite>.</p>
+<p>Cette liste est uniquement constituée des patrons d’URLs définis
+par l”<cite>app</cite> <code class="docutils literal notranslate"><span class="pre">hello</span></code>: <a class="reference internal" href="api/app/hello.html#module-hello.urls" title="hello.urls"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hello.urls</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/topics/http/urls/#how-django-processes-a-request" title="(disponible dans Django v4.2)"><span>How Django processes a request</span></a></p>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </main>
+    <nav class="related bottom" role="navigation">
+  <a class="prev" href="introduction.html" title="Previous">
+    &larr; Introduction
+  </a>
+  <a class="next" href="api/index.html" title="Next">
+    Application Programming Interface (A.P.I.) &rarr;
+  </a>
+  <div class="clear"></div>
+    </nav>
+    
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<footer class="footer" role="contentinfo">
+    &copy; Copyright 2023, Vincent Férotin.
+  
+  Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
+  <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.
+  
+</footer>
+  </body>
+</html>

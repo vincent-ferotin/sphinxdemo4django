@@ -2,8 +2,15 @@
     ToDo-list à conserver au format reStructuredText, pour sa bonne inclusion
     dans la documentation du projet.
 
+*   `projet` `Django`:
+
+    *   supprimer ``settings.STATIC_URL``
+    *   renommer en ``sphinxdemo4django``
+
 *   documentation:
 
+    *   README à la racine du projet, en `Markdown`, avec procédure d'install
+        en mode quickstart
     *   ajouts de ``touch <FILENAME>`` (eg. ``doc/src/todo.rst``, sources Python?)
         adéquats en 1ère action de la recette pour la cible `html`?
 

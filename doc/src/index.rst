@@ -8,6 +8,7 @@ Documentation de `SphinxDemo`
     :caption: Contenu:
 
     introduction
+    project
     api/index
 
 
