@@ -5,7 +5,7 @@ from django.db import models
 
 
 #: Valeurs hardcodées de :class:`Message`, servant au peuplement
-#: initiale de la base de données (`dict` of `str`\ : `str`).
+#: initial de la base de données (`dict` of `str`\ : `str`).
 PREPOPULATED_DATA = [
     {"value": "Hello, World!"},
     {"value": "Bye bye..."},
@@ -15,7 +15,7 @@ class Message(models.Model):
     """
     Message texte tout simple.
     """
-    #: Valeur textuelle du message (`django.models.CharField`).
+    #: Valeur textuelle du message (:external+django:class:`django.db.models.CharField`).
     value = models.CharField(max_length=255, unique=True)
 
     @staticmethod

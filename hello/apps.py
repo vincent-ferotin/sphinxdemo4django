@@ -8,8 +8,8 @@ class HelloConfig(AppConfig):
     """
     Config. de l'`app`.
 
-    Le chemin de cette classe est à ajouter à `INSTALLED_APPS` pour inclure
-    cette `app` à votre projet:
+    Le chemin de cette classe est à ajouter à :external+django:setting:`settings.INSTALLED_APPS
+    <INSTALLED_APPS>` pour inclure cette `app` à votre projet:
 
         .. code-block:: python
             :caption: settings.py
@@ -25,9 +25,8 @@ class HelloConfig(AppConfig):
     name = 'hello'
 
     #: Champ additionnel automatiquement inclus dans les `modèles` de l'`app`
-    #: comme `id` (`django.db.models.Field`).
-    #:
-    #: .. todo:: Lier à la doc. Django
+    #: comme `id` (:external+django:mod:`django.db.models.Field
+    #: <django.db.models.fields>`).
     default_auto_field = 'django.db.models.BigAutoField'
 
     def ready(self):

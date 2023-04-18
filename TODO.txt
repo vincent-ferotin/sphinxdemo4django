@@ -4,7 +4,6 @@
 
 *   documentation:
 
-    *   inclure les liens de refs. vers Django (sphinx.ext.intersphinx)
     *   ajouts de ``touch <FILENAME>`` (eg. ``doc/src/todo.rst``, sources Python?)
         adéquats en 1ère action de la recette pour la cible `html`?
 

@@ -132,11 +132,10 @@
 <dt class="sig sig-object py" id="hello.apps.HelloConfig">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hello.apps.</span></span><span class="sig-name descname"><span class="pre">HelloConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.apps.HelloConfig" title="Lien permanent vers cette définition">¶</a></dt>
 <dd><p>Config. de l”<cite>app</cite>.</p>
-<p>Le chemin de cette classe est à ajouter à <cite>INSTALLED_APPS</cite> pour inclure
-cette <cite>app</cite> à votre projet:</p>
+<p>Le chemin de cette classe est à ajouter à <a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-INSTALLED_APPS" title="(disponible dans Django v4.2)"><code class="xref std std-setting docutils literal notranslate"><span class="pre">settings.INSTALLED_APPS</span></code></a> pour inclure cette <cite>app</cite> à votre projet:</p>
 <blockquote>
-<div><div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">settings.py</span><a class="headerlink" href="#id2" title="Lien permanent vers ce code">¶</a></div>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">settings.py</span><a class="headerlink" href="#id1" title="Lien permanent vers ce code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="c1"># ...</span>
     <span class="s1">&#39;hello.apps.HelloConfig&#39;</span><span class="p">,</span>
@@ -150,11 +149,7 @@ cette <cite>app</cite> à votre projet:</p>
 <dt class="sig sig-object py" id="hello.apps.HelloConfig.default_auto_field">
 <span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#hello.apps.HelloConfig.default_auto_field" title="Lien permanent vers cette définition">¶</a></dt>
 <dd><p>Champ additionnel automatiquement inclus dans les <cite>modèles</cite> de l”<cite>app</cite>
-comme <cite>id</cite> (<cite>django.db.models.Field</cite>).</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">À faire</p>
-<p>Lier à la doc. Django</p>
-</div>
+comme <cite>id</cite> (<a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/models/fields/#module-django.db.models.fields" title="(disponible dans Django v4.2)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">django.db.models.Field</span></code></a>).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -214,7 +209,7 @@ construits d’après les valeurs de <a class="reference internal" href="#hello.
 <dl class="py attribute">
 <dt class="sig sig-object py" id="hello.models.Message.value">
 <span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#hello.models.Message.value" title="Lien permanent vers cette définition">¶</a></dt>
-<dd><p>Valeur textuelle du message (<cite>django.models.CharField</cite>).</p>
+<dd><p>Valeur textuelle du message (<a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/models/fields/#django.db.models.CharField" title="(disponible dans Django v4.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.CharField</span></code></a>).</p>
 </dd></dl>
 
 </dd></dl>
@@ -223,7 +218,7 @@ construits d’après les valeurs de <a class="reference internal" href="#hello.
 <dt class="sig sig-object py" id="hello.models.PREPOPULATED_DATA">
 <span class="sig-prename descclassname"><span class="pre">hello.models.</span></span><span class="sig-name descname"><span class="pre">PREPOPULATED_DATA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'value':</span> <span class="pre">'Hello,</span> <span class="pre">World!'},</span> <span class="pre">{'value':</span> <span class="pre">'Bye</span> <span class="pre">bye...'}]</span></em><a class="headerlink" href="#hello.models.PREPOPULATED_DATA" title="Lien permanent vers cette définition">¶</a></dt>
 <dd><p>Valeurs hardcodées de <a class="reference internal" href="#hello.models.Message" title="hello.models.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>, servant au peuplement
-initiale de la base de données (<cite>dict</cite> of <cite>str</cite>: <cite>str</cite>).</p>
+initial de la base de données (<cite>dict</cite> of <cite>str</cite>: <cite>str</cite>).</p>
 </dd></dl>
 
 </section>
@@ -233,7 +228,11 @@ initiale de la base de données (<cite>dict</cite> of <cite>str</cite>: <cite>st
 <dl class="py data">
 <dt class="sig sig-object py" id="hello.urls.urlpatterns">
 <span class="sig-prename descclassname"><span class="pre">hello.urls.</span></span><span class="sig-name descname"><span class="pre">urlpatterns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;URLPattern</span> <span class="pre">''</span> <span class="pre">[name='hello_index']&gt;]</span></em><a class="headerlink" href="#hello.urls.urlpatterns" title="Lien permanent vers cette définition">¶</a></dt>
-<dd><p>Liste des patrons d’URLs gérés par l”<cite>appp</cite>.</p>
+<dd><p>Liste des patrons d’URLs gérés par l”<cite>app</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/4.2/topics/http/urls/#how-django-processes-a-request" title="(disponible dans Django v4.2)"><span>How Django processes a request</span></a></p>
+</div>
 </dd></dl>
 
 </section>
@@ -243,7 +242,7 @@ initiale de la base de données (<cite>dict</cite> of <cite>str</cite>: <cite>st
 <dl class="py function">
 <dt class="sig sig-object py" id="hello.views.index">
 <span class="sig-prename descclassname"><span class="pre">hello.views.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hello.views.index" title="Lien permanent vers cette définition">¶</a></dt>
-<dd><p>Liste tous les <a class="reference internal" href="#hello.models.Message" title="hello.models.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">hello.models.Message</span></code></a> disponibles en base de données.</p>
+<dd><p>Liste tous les <a class="reference internal" href="#hello.models.Message" title="hello.models.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Messages</span></code></a> disponibles en base de données.</p>
 </dd></dl>
 
 </section>
