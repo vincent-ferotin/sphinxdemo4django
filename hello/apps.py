@@ -26,6 +26,8 @@ class HelloConfig(AppConfig):
 
     #: Champ additionnel automatiquement inclus dans les `modèles` de l'`app`
     #: comme `id` (`django.db.models.Field`).
+    #:
+    #: .. todo:: Lier à la doc. Django
     default_auto_field = 'django.db.models.BigAutoField'
 
     def ready(self):

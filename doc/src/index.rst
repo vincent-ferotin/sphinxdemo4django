@@ -14,6 +14,10 @@ Documentation de `SphinxDemo`
 Autres sections
 ---------------
 
+.. toctree::
+
+    todo
+
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`

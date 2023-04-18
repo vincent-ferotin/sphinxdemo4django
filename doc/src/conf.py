@@ -32,7 +32,12 @@ release = '0'
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.todo',
 ]
+
+# extensions dedicated configuration:
+# - sphinx.ext.todo:
+todo_include_todos = True
 
 templates_path = ['_templates']
 exclude_patterns = []
