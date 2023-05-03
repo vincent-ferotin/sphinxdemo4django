@@ -37,8 +37,13 @@ class HelloConfig(AppConfig):
         Ici, on peuple la base de données avec des premières instances de `modèles`,
         via :meth:`hello.models.Message.prepopulate`.
         """
-        # L'import se fait dans le corps même de la méthode, et non comme
+        # Les imports se font dans le corps même de la méthode, et non comme
         # d'habitude en tête du module, pour éviter une dépendance circulaire.
+        from django.conf import settings
+
+        from .dbutils import is_sqlite_empty
         from .models import Message
 
-        Message.prepopulate()
+        if (settings.DATABASES['default']['ENGINE'] == 'django.db.backends.sqlite3') \
+                and (not is_sqlite_empty()):
+            Message.prepopulate()
