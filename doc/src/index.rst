@@ -10,6 +10,7 @@ Documentation de `SphinxDemo`
     introduction
     project
     api/index
+    doc/index
 
 
 Autres sections

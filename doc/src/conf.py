@@ -43,6 +43,9 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+
+    # third-party
+    'myst_parser',
 ]
 
 # extensions dedicated configuration:
@@ -54,6 +57,11 @@ _django_doc = f'https://docs.djangoproject.com/en/{_django_version}/'
 intersphinx_mapping = {
     'django': (_django_doc, f'{_django_doc}_objects/'),
     'python': ('https://docs.python.org/3', None),
+}
+# - MyST-Parser:
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
 }
 
 templates_path = ['_templates']

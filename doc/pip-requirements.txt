@@ -1,3 +1,4 @@
 Sphinx==6.1.*
 sphinx-library
+MyST-Parser==1.0.*
 
