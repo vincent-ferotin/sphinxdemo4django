@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>README du projet &#8212; Documentation SphinxDemo 0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/library/library.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Introduction" href="introduction.html" />
+    <link rel="prev" title="Documentation de SphinxDemo" href="index.html" />
+ 
+
+<link rel="stylesheet" id="sphinx-library-type" href="_static/library/type-book.css" type="text/css" />
+<link rel="stylesheet" href="_static/custom.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.9" />
+<script>
+  mobile_menu_content = "";
+  function toggleMenu() {
+    var div = document.getElementsByClassName("document").item(0);
+    var btn = document.getElementById("menu-toggler");
+    if(div.classList.contains("mobile-show")) {
+      div.classList.remove("mobile-show");
+      btn.innerHTML = mobile_menu_content;
+    }
+    else {
+      div.classList.add("mobile-show");
+      mobile_menu_content = btn.innerHTML;
+      btn.innerHTML = btn.getAttribute("data-open");
+    }
+  }
+</script>
+  </head>
+<body class="light">
+<div class="document">
+
+  
+  <nav class="mobile-menu" role="navigation">
+    
+  <button type="button" id="menu-toggler" onclick="toggleMenu();"
+    data-open="× Close">≡ Menu</button>
+  <a href="index.html">SphinxDemo</a>
+  <noscript>
+    <div>
+      JavaScript is required to open/close mobile menu.
+    </div>
+  </noscript>
+  </nav>
+  
+
+  
+  <nav class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    
+<h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">README</span></code> du projet</a><ul>
+<li><a class="reference internal" href="#resume">Résumé</a><ul>
+<li><a class="reference internal" href="#project-s-summary">Project’s summary</a></li>
+<li><a class="reference internal" href="#resume-du-projet">Résumé du projet</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#structure-du-projet">Structure du projet</a></li>
+<li><a class="reference internal" href="#demarrage-rapide-du-projet-quickstart">Démarrage rapide du projet (« quickstart »)</a><ul>
+<li><a class="reference internal" href="#creation-et-peuplement-d-un-virtualenv-dedie">Création et peuplement d’un <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> dédié</a></li>
+<li><a class="reference internal" href="#creation-de-la-base-sqlite-du-projet">Création de la base <code class="docutils literal notranslate"><span class="pre">SQLite</span></code> du projet</a></li>
+<li><a class="reference internal" href="#lancement-du-serveur-web-de-developpement">Lancement du serveur web de développement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Sujet précédent</h4>
+    <p class="topless"><a href="index.html"
+                          title="Chapitre précédent">Documentation de <cite>SphinxDemo</cite></a></p>
+  </div>
+  <div>
+    <h4>Sujet suivant</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="Chapitre suivant">Introduction</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+  </nav>
+  <div class="documentwrapper">
+    
+
+    <main class="body" role="main" id="main">
+      
+  <section id="readme-du-projet">
+<h1><code class="docutils literal notranslate"><span class="pre">README</span></code> du projet<a class="headerlink" href="#readme-du-projet" title="Lien permanent vers cette rubrique">¶</a></h1>
+<!--
+NB: Les niveaux de titres sont incrémentés de 1, car le contenu du présent README
+est inclus dans un autre document de la documentation.
+-->
+<section id="resume">
+<h2>Résumé<a class="headerlink" href="#resume" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="project-s-summary">
+<h3>Project’s summary<a class="headerlink" href="#project-s-summary" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>This project aims to be a demonstration of <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> usage
+for <a class="reference external" href="https://www.djangoproject.com/">Django</a> projects.
+It is aimed for small French team not fluent at reading and/or writing English,
+so all other documentation content (including tail of this README)
+and sources files target this language.
+It is specifically not intend to promote any « good practices » regarding
+development of a <code class="docutils literal notranslate"><span class="pre">Django</span></code> project.</p>
+</section>
+<section id="resume-du-projet">
+<h3>Résumé du projet<a class="headerlink" href="#resume-du-projet" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Le présent projet se veut une brêve démonstration d’usage de <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>
+pour un projet <a class="reference external" href="https://www.djangoproject.com/">Django</a>. Il suppose une petite équipe travaillant
+en français principalement, d’où ce choix de langue pour les commentaires
+du code comme le contenu de la documentation.
+Particulièrement, il n’est en aucun cas une préconisation quant à
+de quelconques bonnes pratiques pour le bon développement d’un projet <code class="docutils literal notranslate"><span class="pre">Django</span></code>.</p>
+</section>
+</section>
+<section id="structure-du-projet">
+<h2>Structure du projet<a class="headerlink" href="#structure-du-projet" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Ce projet <a class="reference external" href="https://www.djangoproject.com/">Django</a> est composé, outre sa documentation, d’une <code class="docutils literal notranslate"><span class="pre">app</span> <span class="pre">Django</span></code>
+nommée <code class="docutils literal notranslate"><span class="pre">hello</span></code>, et d’un <code class="docutils literal notranslate"><span class="pre">projet</span> <span class="pre">Django</span></code> nommé <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code> reposant sur cette <code class="docutils literal notranslate"><span class="pre">app</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code>:
+répertoire où sera stockée la base <a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">SQLite</a> par défaut du projet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doc/</span></code>:
+répertoire de la documentation gérée par <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hello/</span></code>:
+sources <a class="reference external" href="https://www.python.org/">Python</a> de l”<code class="docutils literal notranslate"><span class="pre">app</span></code> <a class="reference external" href="https://www.djangoproject.com/">Django</a> principale: <code class="docutils literal notranslate"><span class="pre">hello</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>:
+sources <a class="reference external" href="https://www.python.org/">Python</a> du <code class="docutils literal notranslate"><span class="pre">projet</span></code> <a class="reference external" href="https://www.djangoproject.com/">Django</a>: <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manage.py</span></code>:
+fichier de commandes <a class="reference external" href="https://www.djangoproject.com/">Django</a> pour gérer le projet <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip-requirements.txt</span></code>:
+fichier de dépendances tierces <a class="reference external" href="https://www.python.org/">Python</a> explicites du projet.</p></li>
+</ul>
+</section>
+<section id="demarrage-rapide-du-projet-quickstart">
+<h2>Démarrage rapide du projet (« quickstart »)<a class="headerlink" href="#demarrage-rapide-du-projet-quickstart" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="creation-et-peuplement-d-un-virtualenv-dedie">
+<h3>Création et peuplement d’un <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> dédié<a class="headerlink" href="#creation-et-peuplement-d-un-virtualenv-dedie" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Les dépendances du projet, sous forme de <code class="docutils literal notranslate"><span class="pre">packages</span></code> <a class="reference external" href="https://www.python.org/">Python</a> installables
+via <a class="reference external" href="https://pip.pypa.io/">pip</a>, sont listées dans son fichier <code class="docutils literal notranslate"><span class="pre">pip-requirements.txt</span></code>.
+On les installera dans un <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtualenv</a> dédié:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;un nouveau virtualenv dédié, grâce au module &#39;venv&#39; de la bibliothèque standart</span>
+<span class="c1"># (adaptez le chemin du nouveau virtualenv à votre usage):</span>
+$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/opt/virtualenvs/sphinxdemo
+<span class="c1"># Mise à jour des packages de packaging de ce virtualenv:</span>
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>setuptools
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>wheel
+<span class="c1"># Installation des dépendances du présent projet:</span>
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./pip-requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="creation-de-la-base-sqlite-du-projet">
+<h3>Création de la base <code class="docutils literal notranslate"><span class="pre">SQLite</span></code> du projet<a class="headerlink" href="#creation-de-la-base-sqlite-du-projet" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Si le fichier <code class="docutils literal notranslate"><span class="pre">sphinxdemo/settings.py</span></code> n’a pas été alteré, le projet <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>
+est configuré pour reposer par défaut sur une base de données <a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">SQLite</a>,
+au démarrage inexistante, qui sera stockée dans le répertoire <code class="docutils literal notranslate"><span class="pre">data/</span></code>.
+On la créera, en appliquant automatiquement les <code class="docutils literal notranslate"><span class="pre">migrations</span></code> de schéma spécifiées
+dans le projet, par la commande <code class="docutils literal notranslate"><span class="pre">migrate</span></code> de <code class="docutils literal notranslate"><span class="pre">./manage.py</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-a<span class="w"> </span>./data
+.<span class="w">  </span>..<span class="w">  </span>.gitkeep
+<span class="c1"># Création de la base de données SQLite, et application des migrations du projet:</span>
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>./manage.py<span class="w"> </span>migrate
+Operations<span class="w"> </span>to<span class="w"> </span>perform:
+<span class="w">  </span>Apply<span class="w"> </span>all<span class="w"> </span>migrations:<span class="w"> </span>auth,<span class="w"> </span>contenttypes,<span class="w"> </span>hello,<span class="w"> </span>sessions
+Running<span class="w"> </span>migrations:
+<span class="w">  </span>Applying<span class="w"> </span>contenttypes.0001_initial...<span class="w"> </span>OK
+<span class="o">[</span>...<span class="o">]</span>
+$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>./data
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>vincent<span class="w"> </span>vincent<span class="w"> </span><span class="m">126976</span><span class="w">  </span><span class="m">3</span><span class="w"> </span>mai<span class="w">   </span><span class="m">21</span>:15<span class="w"> </span>database.sqlite3
+</pre></div>
+</div>
+</section>
+<section id="lancement-du-serveur-web-de-developpement">
+<h3>Lancement du serveur web de développement<a class="headerlink" href="#lancement-du-serveur-web-de-developpement" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Pour lancer le serveur web de <em>développement</em>, on appelera la commande <code class="docutils literal notranslate"><span class="pre">runserver</span></code>
+de <code class="docutils literal notranslate"><span class="pre">./manage.py</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lancement du server web de dev.:</span>
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>./manage.py<span class="w"> </span>runserver
+<span class="o">[</span>...<span class="o">]</span>
+Django<span class="w"> </span>version<span class="w"> </span><span class="m">4</span>.2.1,<span class="w"> </span>using<span class="w"> </span>settings<span class="w"> </span><span class="s1">&#39;sphinxdemo.settings&#39;</span>
+Starting<span class="w"> </span>development<span class="w"> </span>server<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:8000/
+Quit<span class="w"> </span>the<span class="w"> </span>server<span class="w"> </span>with<span class="w"> </span>CONTROL-C.
+</pre></div>
+</div>
+<p>Le projet est alors accessible en local via un navigateur web à l’URL par défaut:
+http://127.0.0.1:8000/</p>
+</section>
+</section>
+</section>
+
+
+    </main>
+    <nav class="related bottom" role="navigation">
+  <a class="prev" href="index.html" title="Previous">
+    &larr; Documentation de <cite>SphinxDemo</cite>
+  </a>
+  <a class="next" href="introduction.html" title="Next">
+    Introduction &rarr;
+  </a>
+  <div class="clear"></div>
+    </nav>
+    
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<footer class="footer" role="contentinfo">
+    &copy; Copyright 2023, Vincent Férotin.
+  
+  Created using <a href="http://sphinx-doc.org/">Sphinx</a> with
+  <a href="https://github.com/vsalvino/sphinx-library">Library</a> theme.
+  
+</footer>
+  </body>
+</html>

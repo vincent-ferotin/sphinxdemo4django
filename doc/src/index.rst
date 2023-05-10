@@ -7,6 +7,7 @@ Documentation de `SphinxDemo`
     :maxdepth: 2
     :caption: Contenu:
 
+    readme
     introduction
     project
     api/index

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>README du projet &#8212; Documentation SphinxDemo 0</title>
+    <title>README de la documentation &#8212; Documentation SphinxDemo 0</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/library/library.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -61,19 +61,13 @@
     
 <h3>Page Contents</h3>
 <ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">README</span></code> du projet</a><ul>
-<li><a class="reference internal" href="#resume">Résumé</a><ul>
-<li><a class="reference internal" href="#project-s-summary">Project’s summary</a></li>
-<li><a class="reference internal" href="#resume-du-projet">Résumé du projet</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#structure-du-projet">Structure du projet</a></li>
-<li><a class="reference internal" href="#demarrage-rapide-du-projet-quickstart">Démarrage rapide du projet (« quickstart »)</a><ul>
-<li><a class="reference internal" href="#creation-et-peuplement-d-un-virtualenv-dedie">Création et peuplement d’un <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> dédié</a></li>
-<li><a class="reference internal" href="#creation-de-la-base-sqlite-du-projet">Création de la base <code class="docutils literal notranslate"><span class="pre">SQLite</span></code> du projet</a></li>
-<li><a class="reference internal" href="#lancement-du-serveur-web-de-developpement">Lancement du serveur web de développement</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">README</span></code> de la documentation</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#formats-et-outils">Formats et outils</a></li>
+<li><a class="reference internal" href="#dependances-de-la-documentation">Dépendances de la documentation</a></li>
+<li><a class="reference internal" href="#developpement-de-la-documentation-et-generation-de-sortie-html">Développement de la documentation et génération de sortie HTML</a></li>
+<li><a class="reference internal" href="#structure-detaillee-du-projet">Structure détaillée du projet</a></li>
+<li><a class="reference internal" href="#utilisation">Utilisation</a></li>
 </ul>
 </li>
 </ul>
@@ -104,108 +98,111 @@
 
     <main class="body" role="main" id="main">
       
-  <section id="readme-du-projet">
-<h1><code class="docutils literal notranslate"><span class="pre">README</span></code> du projet<a class="headerlink" href="#readme-du-projet" title="Lien permanent vers cette rubrique">¶</a></h1>
+  <section id="readme-de-la-documentation">
+<h1><code class="docutils literal notranslate"><span class="pre">README</span></code> de la documentation<a class="headerlink" href="#readme-de-la-documentation" title="Lien permanent vers cette rubrique">¶</a></h1>
 <!--
 NB: Les niveaux de titres sont incrémentés de 1, car le contenu du présent README
 est inclus dans un autre document de la documentation.
 -->
-<section id="resume">
-<h2>Résumé<a class="headerlink" href="#resume" title="Lien permanent vers cette rubrique">¶</a></h2>
-<section id="project-s-summary">
-<h3>Project’s summary<a class="headerlink" href="#project-s-summary" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>This project aims to be a demonstration of <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> usage
-for <a class="reference external" href="https://www.djangoproject.com/">Django</a> projects.
-It is aimed for small French team not fluent at reading and/or writing English,
-so all other documentation content (including tail of this README)
-and sources files target this language.
-It is specifically not intend to promote any « good practices » regarding
-development of a <code class="docutils literal notranslate"><span class="pre">Django</span></code> project.</p>
-</section>
-<section id="resume-du-projet">
-<h3>Résumé du projet<a class="headerlink" href="#resume-du-projet" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Le présent projet se veut une brêve démonstration d’usage de <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>
-pour un projet <a class="reference external" href="https://www.djangoproject.com/">Django</a>. Il suppose une petite équipe travaillant
-en français principalement, d’où ce choix de langue pour les commentaires
-du code comme le contenu de la documentation.
-Particulièrement, il n’est en aucun cas une préconisation quant à
-de quelconques bonnes pratiques pour le bon développement d’un projet <code class="docutils literal notranslate"><span class="pre">Django</span></code>.</p>
-</section>
-</section>
-<section id="structure-du-projet">
-<h2>Structure du projet<a class="headerlink" href="#structure-du-projet" title="Lien permanent vers cette rubrique">¶</a></h2>
-<p>Ce projet <a class="reference external" href="https://www.djangoproject.com/">Django</a> est composé, outre sa documentation, d’une <code class="docutils literal notranslate"><span class="pre">app</span> <span class="pre">Django</span></code>
-nommée <code class="docutils literal notranslate"><span class="pre">hello</span></code>, et d’un <code class="docutils literal notranslate"><span class="pre">projet</span> <span class="pre">Django</span></code> nommé <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code> reposant sur cette <code class="docutils literal notranslate"><span class="pre">app</span></code>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>La présente documentation a pour but de documenter le projet <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>,
+de démonstration d’usage possible de <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> pour un <code class="docutils literal notranslate"><span class="pre">projet</span></code> <a class="reference external" href="https://www.djangoproject.com/">Django</a>.
+Pour un non-contributeur au présent projet, les sous-répertoires d’intérêt sont les suivants:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code>:
-répertoire où sera stockée la base <a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">SQLite</a> par défaut du projet</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">doc/</span></code>:
-répertoire de la documentation gérée par <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hello/</span></code>:
-sources <a class="reference external" href="https://www.python.org/">Python</a> de l”<code class="docutils literal notranslate"><span class="pre">app</span></code> <a class="reference external" href="https://www.djangoproject.com/">Django</a> principale: <code class="docutils literal notranslate"><span class="pre">hello</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>:
-sources <a class="reference external" href="https://www.python.org/">Python</a> du <code class="docutils literal notranslate"><span class="pre">projet</span></code> <a class="reference external" href="https://www.djangoproject.com/">Django</a>: <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">manage.py</span></code>:
-fichier de commandes <a class="reference external" href="https://www.djangoproject.com/">Django</a> pour gérer le projet <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip-requirements.txt</span></code>:
-fichier de dépendances tierces <a class="reference external" href="https://www.python.org/">Python</a> explicites du projet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doc/html/</span></code>: documentation au format HTML (site web statique complet)</p></li>
 </ul>
 </section>
-<section id="demarrage-rapide-du-projet-quickstart">
-<h2>Démarrage rapide du projet (« quickstart »)<a class="headerlink" href="#demarrage-rapide-du-projet-quickstart" title="Lien permanent vers cette rubrique">¶</a></h2>
-<section id="creation-et-peuplement-d-un-virtualenv-dedie">
-<h3>Création et peuplement d’un <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> dédié<a class="headerlink" href="#creation-et-peuplement-d-un-virtualenv-dedie" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Les dépendances du projet, sous forme de <code class="docutils literal notranslate"><span class="pre">packages</span></code> <a class="reference external" href="https://www.python.org/">Python</a> installables
-via <a class="reference external" href="https://pip.pypa.io/">pip</a>, sont listées dans son fichier <code class="docutils literal notranslate"><span class="pre">pip-requirements.txt</span></code>.
-On les installera dans un <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtualenv</a> dédié:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création d&#39;un nouveau virtualenv dédié, grâce au module &#39;venv&#39; de la bibliothèque standart</span>
-<span class="c1"># (adaptez le chemin du nouveau virtualenv à votre usage):</span>
-$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/opt/virtualenvs/sphinxdemo
-<span class="c1"># Mise à jour des packages de packaging de ce virtualenv:</span>
-$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>setuptools
-$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>wheel
-<span class="c1"># Installation des dépendances du présent projet:</span>
-$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./pip-requirements.txt
+<section id="formats-et-outils">
+<h2>Formats et outils<a class="headerlink" href="#formats-et-outils" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>La documentation HTML est générée par l’outil de documentation <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>,
+qu’on aura pris soin d’installer par ailleurs pour contribuer au projet
+comme à la présente documentation (cf. section suivante).
+Les sources de la documentation sont disponibles dans le sous-répertoire <code class="docutils literal notranslate"><span class="pre">doc/src/</span></code>,
+au format <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> que comprend <em>Sphinx</em>:
+ce sont des simples <a class="reference external" href="https://fr.wikipedia.org/wiki/Fichier_texte">fichiers texte</a>.</p>
+<p>La génération de la sortie HTML est commandée par le <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>
+à la racine du répertoire de la documentation (<code class="docutils literal notranslate"><span class="pre">doc/Makefile</span></code>).</p>
+</section>
+<section id="dependances-de-la-documentation">
+<h2>Dépendances de la documentation<a class="headerlink" href="#dependances-de-la-documentation" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>La génération de sortie HTML de la présente documentation se fait grâce à
+la série de logiciels tiers spécifiés dans le fichier <code class="docutils literal notranslate"><span class="pre">doc/pip-requirements.txt</span></code>.</p>
+<p>On pourra les installer de manière additionnelle dans le <em>virtualenv</em> du projet
+(cf. son <code class="docutils literal notranslate"><span class="pre">README</span></code>).
+Sous Unix, cela peut se faire par exemple avec:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># On suppose le réemploi du virtualenv du projet &#39;sphinxdemo&#39;, situé dans l&#39;arborescence</span>
+<span class="c1"># système ici: /opt/virtualenvs/sphinxdemo/</span>
+<span class="c1"># Installation des dépendances propres à la documentation</span>
+$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>doc/pip-requirements.txt
 </pre></div>
 </div>
 </section>
-<section id="creation-de-la-base-sqlite-du-projet">
-<h3>Création de la base <code class="docutils literal notranslate"><span class="pre">SQLite</span></code> du projet<a class="headerlink" href="#creation-de-la-base-sqlite-du-projet" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Si le fichier <code class="docutils literal notranslate"><span class="pre">sphinxdemo/settings.py</span></code> n’a pas été alteré, le projet <code class="docutils literal notranslate"><span class="pre">sphinxdemo</span></code>
-est configuré pour reposer par défaut sur une base de données <a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">SQLite</a>,
-au démarrage inexistante, qui sera stockée dans le répertoire <code class="docutils literal notranslate"><span class="pre">data/</span></code>.
-On la créera, en appliquant automatiquement les <code class="docutils literal notranslate"><span class="pre">migrations</span></code> de schéma spécifiées
-dans le projet, par la commande <code class="docutils literal notranslate"><span class="pre">migrate</span></code> de <code class="docutils literal notranslate"><span class="pre">./manage.py</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-a<span class="w"> </span>./data
-.<span class="w">  </span>..<span class="w">  </span>.gitkeep
-<span class="c1"># Création de la base de données SQLite, et application des migrations du projet:</span>
-$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>./manage.py<span class="w"> </span>migrate
-Operations<span class="w"> </span>to<span class="w"> </span>perform:
-<span class="w">  </span>Apply<span class="w"> </span>all<span class="w"> </span>migrations:<span class="w"> </span>auth,<span class="w"> </span>contenttypes,<span class="w"> </span>hello,<span class="w"> </span>sessions
-Running<span class="w"> </span>migrations:
-<span class="w">  </span>Applying<span class="w"> </span>contenttypes.0001_initial...<span class="w"> </span>OK
-<span class="o">[</span>...<span class="o">]</span>
-$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>./data
--rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>vincent<span class="w"> </span>vincent<span class="w"> </span><span class="m">126976</span><span class="w">  </span><span class="m">3</span><span class="w"> </span>mai<span class="w">   </span><span class="m">21</span>:15<span class="w"> </span>database.sqlite3
+<section id="developpement-de-la-documentation-et-generation-de-sortie-html">
+<h2>Développement de la documentation et génération de sortie HTML<a class="headerlink" href="#developpement-de-la-documentation-et-generation-de-sortie-html" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>La documentation offre, à travers son <code class="docutils literal notranslate"><span class="pre">doc/Makefile</span></code>, les tâches les plus courantes.
+Vous pouvez les lister en invoquant (GNU) <code class="docutils literal notranslate"><span class="pre">make</span></code> sans argument,
+ce qui affichera son aide succinte intégrée, notamment la liste des <em>cibles</em>
+(ici des « commandes ») offertes.</p>
+<p>Une opération courante, par exemple <code class="docutils literal notranslate"><span class="pre">html</span></code> pour générer la sortie HTML,
+s’invoquera en spécifiant à <code class="docutils literal notranslate"><span class="pre">make</span></code> cette <em>cible</em> particulière comme argument:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>doc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>html
 </pre></div>
 </div>
 </section>
-<section id="lancement-du-serveur-web-de-developpement">
-<h3>Lancement du serveur web de développement<a class="headerlink" href="#lancement-du-serveur-web-de-developpement" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Pour lancer le serveur web de <em>développement</em>, on appelera la commande <code class="docutils literal notranslate"><span class="pre">runserver</span></code>
-de <code class="docutils literal notranslate"><span class="pre">./manage.py</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lancement du server web de dev.:</span>
-$<span class="w"> </span>/opt/virtualenvs/sphinxdemo/bin/python3<span class="w"> </span>./manage.py<span class="w"> </span>runserver
-<span class="o">[</span>...<span class="o">]</span>
-Django<span class="w"> </span>version<span class="w"> </span><span class="m">4</span>.2.1,<span class="w"> </span>using<span class="w"> </span>settings<span class="w"> </span><span class="s1">&#39;sphinxdemo.settings&#39;</span>
-Starting<span class="w"> </span>development<span class="w"> </span>server<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:8000/
-Quit<span class="w"> </span>the<span class="w"> </span>server<span class="w"> </span>with<span class="w"> </span>CONTROL-C.
+<section id="structure-detaillee-du-projet">
+<h2>Structure détaillée du projet<a class="headerlink" href="#structure-detaillee-du-projet" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>La documentation du projet est composée de matériel pour <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a>,
+et des utilisateurs n’utilisant aucun de ces deux outils:</p>
+<ul class="simple">
+<li><p>le matériel pour <em>Sphinx</em> comprend:</p>
+<ul>
+<li><p>le fichier <code class="docutils literal notranslate"><span class="pre">doc/Makefile</span></code>, qui contient les cibles pour générer
+les formats de sortie,</p></li>
+<li><p>le répertoire <code class="docutils literal notranslate"><span class="pre">doc/src/</span></code>, qui comprend les sources <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>
+et la configuration nécessaires à <em>Sphinx</em> pour générer la sortie,</p></li>
+<li><p>le répertoire <code class="docutils literal notranslate"><span class="pre">doc/doctrees/</span></code>, utilisé en interne par <em>Sphinx</em>,</p></li>
+</ul>
+</li>
+<li><p>la sortie HTML, utilisables par les lecteurs du projet,
+est enregistrée dans le sous-répertoire <code class="docutils literal notranslate"><span class="pre">doc/html/</span></code>.</p></li>
+</ul>
+<p>Cette structure, cette arborescence permet donc d’enregistrer et versionner
+tant les sources de la documentation, ses formats de sortie, et la configuration
+de la machine virtuelle permettant la transformation des premières en
+ces secondes, et autorisant des utilisateurs non techniciens à accéder
+néanmoins au contenu de la documentation
+– pourvu bien sûr qu’on prenne soin de systématiquement générer et versionner
+toutes les sorties à chaque modification des sources.</p>
+</section>
+<section id="utilisation">
+<h2>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Maintenant que la configuration requise a été réalisée, il est facile
+d’utiliser le <em>virtualenv</em> pour demander à <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> de générer
+la sortie HTML.</p>
+<p>Les cibles principales du <code class="docutils literal notranslate"><span class="pre">doc/Makefile</span></code> sont listées dans la sortie de <code class="docutils literal notranslate"><span class="pre">help</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>doc
+$<span class="w"> </span>make<span class="w"> </span><span class="nb">help</span>
 </pre></div>
 </div>
-<p>Le projet est alors accessible en local via un navigateur web à l’URL par défaut:
-http://127.0.0.1:8000/</p>
-</section>
+<p>(Par la suite, on supposera le répertoire courant où sont exécutées les commandes
+celui de la documentation: <code class="docutils literal notranslate"><span class="pre">doc/</span></code>.)</p>
+<p>Il est possible d’enchaîner les cibles, pour réaliser l’exécution
+de plusieurs recettes en une même invocation. Le patron d’invocation est le suivant:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>TARGET1<span class="w"> </span><span class="o">[</span>TARGET2<span class="w"> </span><span class="o">[</span>...<span class="o">]]</span>
+</pre></div>
+</div>
+<p>Si le <em>virtualenv</em> est <code class="docutils literal notranslate"><span class="pre">activé</span></code>, il n’est pas besoin de spécifier le chemin du binaire
+<code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> utilisé par <code class="docutils literal notranslate"><span class="pre">doc/Makefile</span></code>; dans le cas inverse où le <em>virtualenv</em>
+ne serait pas activé, on prendra soin de surcharger la variable d’environnement <code class="docutils literal notranslate"><span class="pre">SPHINXBUILD</span></code>
+avec le chemin de ce binaire:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nv">SPHINXBUILD</span><span class="o">=</span><span class="s2">&quot;/opt/virtualenvs/sphinxdemo/bin/sphinx-build&quot;</span><span class="w"> </span>make<span class="w"> </span>html
+</pre></div>
+</div>
+<p>Pour regénérer l’intégralité des sorties, utiliser la cible <code class="docutils literal notranslate"><span class="pre">all</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>all
+</pre></div>
+</div>
 </section>
 </section>
 

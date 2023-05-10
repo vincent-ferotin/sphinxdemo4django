@@ -1,4 +1,4 @@
-# `README` de la documentation
+# `README` du projet
 
 ```{include} ../../README.md
 ```
